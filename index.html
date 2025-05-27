@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Aditi Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+
+  <ul class="nav-list">
+    <li><a href="#about">About Me</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <li><a href="resume.html">Resume</a></li>
+</nav>
+
+  <header>
+    <button id="dark-mode-toggle">Toggle Dark Mode</button>
+    <h1>It's me Aditi Banjade</h1>
+    <p>Welcome to my portfolio website!</p>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+  <img src="photo.jpg" alt="My Photo" style="width:150px; border-radius: 50%;">
+    <p> I am BIT Student at Patan Multiple Campus.I am learning web development</p>
+  </section>
+
+    <section id="projects">
+  <h2>My Projects</h2>
+  <ul>
+    <li>
+      No project still learning
+      <br>
+      <a href="#" target="_blank" class="btn">View Project</a>
+    </li>
+    <li>
+      Portfolio Website – This current site you're viewing!
+      <br>
+      <a href="#" target="_blank" class="btn">View Code</a>
+    </li>
+  </ul>
+</section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+     <p>Email: <a href="mailto:codingforaditi@gmail.com">codingforaditi@gmail.com</a></p>
+  <div class="social-links">|
+  <a href="https://www.instagram.com/ad_iti3137/" target="_blank">Instagram</a> |
+    <a href="https://www.linkedin.com/in/aditi-b-5a00a3304/" target="_blank">LinkedIn</a> |
+    <a href="https://github.com/codingforaditi" target="_blank">My GitHub</a> |
+  </div>
+</section>
+<script>
+  const toggleButton = document.getElementById('dark-mode-toggle');
+
+  toggleButton.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+  });
+</script>
+
+</body>
+</html>
