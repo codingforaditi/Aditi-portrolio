@@ -2,7 +2,7 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-color: #f4f4f4;
+  background: linear-gradient(135deg, #9ad7de, #a15f53);
   color: #333;
   padding: 20px;
   max-width: 800px;
@@ -16,30 +16,32 @@ header {
 }
 
 header h1 {
-  color: #007bff;
+  color: #295f9a;
   font-size: 2.5em;
   margin-bottom: 10px;
 }
 
 header p {
   font-size: 1.2em;
-  color: #555;
+  color: #45309188; /* medium lavender */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  font-weight: 500;
 }
 
 /* Sections */
 section {
-  background-color: white;
-  padding: 20px;
+  background-color: hwb(286 44% 51%);
+  padding: 25px;
   margin-bottom: 30px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 /* About Me image */
 #about img {
   display: block;
   margin: 10px auto 20px;
-  border: 5px solid #007bff;
+  border: 5px solid #4c77a5;
   border-radius: 50%;
   width: 150px;
   height: 150px;
@@ -49,7 +51,7 @@ section {
 /* Section headings */
 section h2 {
   margin-bottom: 15px;
-  color: #007bff;
+  color: #1b4a7b;
   font-size: 1.8em;
 }
 
@@ -65,34 +67,38 @@ section h2 {
 }
 
 #projects li {
-  background-color: #e9ecef;
+  background-color: #94a0b1;
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 5px;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 #projects li:hover {
-  background-color: #007bff;
-  color: white;
+  background-color: #456d98;
+  color: rgb(204, 156, 156);
+  transform: scale(1.02);
   cursor: pointer;
 }
+
 /* Project Buttons */
 .btn {
   display: inline-block;
   padding: 8px 15px;
   margin-top: 8px;
-  background-color: #007bff;
+  background-color: #4573a4;
   color: white;
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .btn:hover {
-  background-color: #0056b3;
+  background-color: #315985;
+  transform: scale(1.05);
 }
+
 /* Contact section */
 #contact {
   text-align: center;
@@ -100,7 +106,7 @@ section h2 {
 }
 
 #contact a {
-  color: #007bff;
+  color: #4472a3;
   text-decoration: none;
   font-weight: bold;
 }
@@ -112,6 +118,7 @@ section h2 {
 .social-links {
   margin-top: 10px;
 }
+
 /* Fade-in animation */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
@@ -133,28 +140,12 @@ section:nth-of-type(1) { animation-delay: 0.3s; }
 section:nth-of-type(2) { animation-delay: 0.6s; }
 section:nth-of-type(3) { animation-delay: 0.9s; }
 section:nth-of-type(4) { animation-delay: 1.2s; }
-.btn {
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-.btn {
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
 
-.btn:hover {
-  background-color: #0056b3;
-  transform: scale(1.05);
-}
-#projects li {
-  transition: transform 0.3s ease;
-}
-
-#projects li:hover {
-  transform: scale(1.02);
-}
 /* Responsive design for small screens */
 @media (max-width: 600px) {
   body {
     padding: 10px;
+    font-size: 16px;
   }
 
   header h1 {
@@ -163,6 +154,7 @@ section:nth-of-type(4) { animation-delay: 1.2s; }
 
   #about img {
     width: 100px;
+    height: 100px;
   }
 
   section {
@@ -173,10 +165,15 @@ section:nth-of-type(4) { animation-delay: 1.2s; }
     padding: 10px;
     font-size: 1em;
   }
+
+  nav ul {
+    flex-direction: column;
+  }
 }
+
 /* Navigation bar */
 nav {
-  background-color: #333;
+  background-color: #2b3c60;
   padding: 10px 0;
   position: sticky;
   top: 0;
@@ -204,49 +201,69 @@ nav {
 }
 
 .nav-list a:hover {
-  color: #007bff;
+  color: #3b6da1;
 }
+
 html {
   scroll-behavior: smooth;
-}
-/* Light mode styles (default) */
-body {
-  background-color: white;
-  color: black;
 }
 
 /* Dark mode styles */
 body.dark-mode {
-  background-color: #121212;
-  color: #e0e0e0;
+  background: linear-gradient(135deg, #1c1c1c, #3b2f2f);
+  color: #e0dcdc;
 }
 
-/* Style the toggle button */
+body.dark-mode header h1 {
+  color: #f4dcdc;
+}
+
+body.dark-mode header p {
+  color: #d0bcbc;
+}
+
+body.dark-mode section {
+  background-color: #422f2f;
+  color: #e0dcdc;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+body.dark-mode #projects li {
+  background-color: #5a3b3b;
+  color: #f1eaea;
+}
+
+body.dark-mode #projects li:hover {
+  background-color: #7a4c4c;
+  color: #fff;
+}
+
+body.dark-mode .btn {
+  background-color: #7a4c4c;
+  color: #fff;
+}
+
+body.dark-mode .btn:hover {
+  background-color: #a15f5f;
+}
+
+/* Toggle button */
 #dark-mode-toggle {
   margin-top: 10px;
   padding: 8px 15px;
   cursor: pointer;
-}
-/* For devices with max width 600px (phones) */
-@media (max-width: 600px) {
-  body {
-    font-size: 16px; /* Make text a bit bigger on small screens */
-    padding: 10px;
-  }
-
-  header, section {
-    padding: 10px;
-  }
-
-  img {
-    width: 100%; /* Make images full width on phones */
-    height: auto;
-  }
-
-  nav ul {
-    flex-direction: column; /* Stack nav links vertically */
-  }
-
-  /*  have a nav bar, style it for mobile here */
+  background-color: #4472a3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
+body.dark-mode #dark-mode-toggle {
+  background-color: #a15f5f;
+  color: white;
+}
+/* Remove underline from all links */
+a {
+  text-decoration: none;
+}
