@@ -21,7 +21,7 @@
 
   <section id="education">
     <h2>Education</h2>
-    <p>Studing in Patan Multiple Campus</p>
+    <p>Studying at Patan Multiple Campus</p>
   </section>
 
   <section id="skills">
@@ -30,13 +30,24 @@
       <li>HTML, CSS, JavaScript</li>
       <li>Web Development</li>
       <li>Problem Solving</li>
-
     </ul>
   </section>
 
   <section id="experience">
     <h2>Experience</h2>
-    <p>No job experience just exploring myself</p>
+    <p>No job experience yet, just exploring myself</p>
   </section>
+
+  <script>
+    // Optional: Dark mode toggle if you want it here too
+    const toggleButton = document.createElement('button');
+    toggleButton.id = 'dark-mode-toggle';
+    toggleButton.textContent = 'Toggle Dark Mode';
+    document.body.insertBefore(toggleButton, document.body.firstChild);
+
+    toggleButton.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
 </body>
 </html>
